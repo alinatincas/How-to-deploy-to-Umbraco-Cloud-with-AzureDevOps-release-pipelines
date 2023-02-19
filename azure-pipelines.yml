@@ -1,0 +1,79 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+ 
+pool:
+  vmImage: "ubuntu-latest"
+ 
+variables:  
+  - name: buildConfiguration
+    value: "Release" 
+  - name: publishArtifactName
+    value: "Umbraco"  
+  - name: webProjectPath
+    value: "Umbraco"
+
+name: $(Rev:r)
+
+stages:
+  - stage: ci
+    displayName: "Continuous Integration"
+    jobs:
+      - job: build_solution
+        displayName: "Build solution"
+        steps:   
+
+          # Add any front end build steps here
+ 
+          - task: DotNetCoreCLI@2
+            displayName: .NET - Restore
+            inputs:
+              command: restore
+              projects: "**/*.csproj"
+        
+          - task: DotNetCoreCLI@2
+            displayName: .NET - Build
+            inputs:
+              projects: "**/*.csproj"
+              arguments: "--configuration $(buildConfiguration) --no-restore"
+              workingDirectory: /      
+        
+          - task: DotNetCoreCLI@2
+            displayName: .NET - Test
+            inputs:
+              command: test
+              projects: "**/[Tt]ests/*.csproj"
+              arguments: "--configuration $(buildConfiguration) --no-restore"
+              workingDirectory: /
+              nobuild: true
+          
+          - task: CopyFiles@2
+            displayName: "Copy web source code to artifacts folder"
+            inputs:
+              Contents: '**'
+              TargetFolder: '$(Build.ArtifactStagingDirectory)'
+              CleanTargetFolder: true
+ 
+          - task: ArchiveFiles@2
+            displayName: Create artifacts zip
+            inputs:
+              rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'     
+              includeRootFolder: false
+              archiveType: '7z'
+              sevenZipCompression: 'fastest'
+              archiveFile: '$(Build.ArtifactStagingDirectory)/artifacts.7z' 
+              replaceExistingArchive: true                                 
+ 
+          - task: PublishPipelineArtifact@1
+            displayName: "Publish packages artifact"
+            inputs:
+              targetPath: "$(Build.ArtifactStagingDirectory)/artifacts.7z"
+              artifactName: $(publishArtifactName)
+          

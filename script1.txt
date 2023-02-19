@@ -1,0 +1,22 @@
+# Write your PowerShell commands here.
+
+
+Add-Type -AssemblyName System.Web
+
+$Env:GIT_TERMINAL_PROMPT=0
+
+$folderName = "$(System.DefaultWorkingDirectory)/$(solutionNamespace).Cloud"
+
+$UsernameEncoded = [System.Web.HttpUtility]::UrlEncode("$(gitUmbracoCloudLogin)")
+$PasswordEncoded = [System.Web.HttpUtility]::UrlEncode("$(gitUmbracoCloudPassword)")
+
+$currentRemoteUri = New-Object System.Uri $(gitUmbracoCloudRepoUrlDevelopment)
+$DeploymentUrl = New-Object System.UriBuilder($currentRemoteUri)
+$DeploymentUrl.UserName = $UsernameEncoded
+$DeploymentUrl.Password = $PasswordEncoded
+
+Write-Host $DeploymentUrl
+
+New-Item -Type Directory "${folderName}"
+
+git -c 'credential.helper=' clone ${DeploymentUrl} ${folderName}
