@@ -1,5 +1,6 @@
 # Setting up CI/CD for Umbraco Cloud using Azure DevOps
 This a step by step guide on how you can set up CI/CD for Umbraco Cloud using Azure DevOps
+![devops](https://user-images.githubusercontent.com/27504014/220066762-f3a207d8-84a5-42a6-a699-e0f53c7465f0.png)
 
 This guide is based on the CodeGarden talk [“Team workflow for Umbraco Cloud and Azure DevOps”](https://www.youtube.com/watch?v=Ss0tlxOujB0) with Dave´s [github repository](https://github.com/dawoe/umbraco-cloud-devops), which contains the scripts used for the guide.
 
@@ -30,7 +31,7 @@ This guide is based on the CodeGarden talk [“Team workflow for Umbraco Cloud a
 
 ### Create a pipeline
 
-Create a new Pipeline on your Azure Repository with “Azure Repos Git” with the created repository -> choose “Starter pipeline” in the configuration part and then **paste in the code from the file named ```“azure-pipelines.yaml”```** and then save and run it to your main branch.
+Create a new Pipeline on your Azure Repository with “Azure Repos Git” with the created repository -> choose “Starter pipeline” in the configuration part and then **paste in the code from the file named [“azure-pipelines.yaml”](https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/blob/main/azure-pipelines.yml)** and then save and run it to your main branch.
 
 The above code contains all the build configurations for this specific pipeline. This just runs basic fundamentals .Net Core actions such as .Net restore, build and test. Then it copies the files to artifacts folder and creates an artifacts zip file and then it publishes that artifact. 
 
@@ -57,7 +58,7 @@ Now let´s create a task for our stage/job by clicking on the “task”. Here w
 
 **2.** Let´s add one more task called “PowerShell”. This task creates a PowerShell script that clones down our Umbraco Cloud environment.
 - Pick “inline” type, so we can write our own PowerShell commands.
--  Add in the **script code from the file named “script1.txt”**.
+-  Add in the **script code from the file named [“script1.txt”](https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/blob/main/script1.txt)**.
 
 Here we specify a folder name which will then be equal to our temporary storage in Azure DevOps, Then we assign our credentials from Cloud (logging and password) and clone URL from Cloud and a Deployment URL. Then we create a new directory with a folder name and clone down everything from our deployment url to that specific folder.
 
@@ -76,7 +77,7 @@ Here we specify a folder name which will then be equal to our temporary storage 
 - The “target folder” is our Cloud temporary folder ```$(System.DefaultWorkingDirectory)/$(solutionNamespace).Cloud```
 - In the “advanced” enable the “overwrite” option
 
-**5.** Our last task is a “PowerShell” script with the “inline” type and **paste in the script code from the file named ```“script2.txt”```**.
+**5.** Our last task is a “PowerShell” script with the “inline” type and **paste in the script code from the file named [“script2.txt”](https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/blob/main/script2.txt)**.
 Here we are going inside our temporary cloud folder, we do some git configurations to add an identity to the person that pushes to the cloud repository. Then we have some git commands to commit and force push those changes to our git Umbraco Cloud branch with a message of a release id from Azure DevOps so we can track everything through the release id.
 
 - On the “advance” option enable the  “Show warnings as Azure DevOps warnings” 
@@ -99,7 +100,7 @@ On our Powershell scripts we have mentioned some environment variables which we 
 
 **4.** Save the linked variable group 
 
-### Test our release pipeline
+### Test your release pipeline
 **1.** Locally, on your DevOps repository, pull the changes and then add a new change to your repository (example: a .txt file). Then you can push from your local branch up to the azure repo which then triggered the build pipeline which then triggers the release pipeline and then it eventually pushes to Umbraco Cloud. 
 
 **2.** On the release pipeline where you can see the commits, if you click on “build” you can see the behind scene what happens when the tasks are run in regard to the build itself 
