@@ -47,7 +47,7 @@ Once this pipeline is done publishing, now we need to create a release pipeline.
 
 **4.** Create a task on the stage/job you have created. In order to this, click on the lightning with a person icon “pre-deployment conditions” and here we need to make sure that we have the triggers defined which would then start the deployment to the stage which is “after release” is being built.
 
-### Create tasks for our release pipelines
+### Create tasks for your release pipelines
 Now let´s create a task for our stage/job by clicking on the “task”. Here we can create the jobs we need to go through every time our release pipeline is triggered. 
 
 **1.** The first task will be to extract the file task. So click on the “+” button on the Agent job to add a task to it and find the “extract files”. 
@@ -56,7 +56,7 @@ Now let´s create a task for our stage/job by clicking on the “task”. Here w
 
 ![task](https://user-images.githubusercontent.com/27504014/219952072-80bb80a6-3a2b-4a8c-9c4d-8a67f2d51080.png)
 
-**2.** Let´s add one more task called “PowerShell”. This task creates a PowerShell script that clones down our Umbraco Cloud environment.
+**2.** Let´s add one more task called “PowerShell”. This task creates a PowerShell script that clones down your Umbraco Cloud environment.
 - Pick “inline” type, so we can write our own PowerShell commands.
 -  Add in the **script code from the file named [“script1.txt”](https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/blob/main/script1.txt)**.
 
@@ -86,7 +86,7 @@ Here we are going inside our temporary cloud folder, we do some git configuratio
 
 ![taskSave](https://user-images.githubusercontent.com/27504014/219952452-a478c117-373b-49b3-8222-52ea1da53170.png)
 
-### Specify our environment variables
+### Specify your environment variables
 On our Powershell scripts we have mentioned some environment variables which we need to create and define. 
 
 **1.** In the same release pipeline, click on “Variables” -> “Variable Groups” -> “Manage variable groups” -> Add a new “Variable Group”. 
@@ -115,3 +115,5 @@ You can see the same if you head over to the stage of the release pipeline and c
 # The end
 
 Thank you for reading and following this guide. 
+
+> If you have any feedback or encounter issues, please use this link to create an issue: https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/issues
