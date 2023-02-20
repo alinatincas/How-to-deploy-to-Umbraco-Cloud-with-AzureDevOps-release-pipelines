@@ -1,4 +1,4 @@
-# How to deploy to Umbraco Cloud projects with AzureDevOps release pipelines
+# How to deploy to Umbraco Cloud with AzureDevOps release pipelines
 This a step by step guide on how you can deploy to Umbraco Cloud projects with AzureDevOps release pipelines
 ![devops](https://user-images.githubusercontent.com/27504014/220066762-f3a207d8-84a5-42a6-a699-e0f53c7465f0.png)
 
