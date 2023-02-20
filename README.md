@@ -116,4 +116,4 @@ You can see the same if you head over to the stage of the release pipeline and c
 
 Thank you for reading and following this guide. 
 
-> If you have any feedback or encounter issues, please use this link to create an issue: https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/issues
+> If you have any feedback or encounter issues, please use this [link](https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/issues) to create an issue
