@@ -1,5 +1,5 @@
-# Setting up CI/CD for Umbraco Cloud using Azure DevOps
-This a step by step guide on how you can set up CI/CD for Umbraco Cloud using Azure DevOps
+# How to deploy to Umbraco Cloud projects with AzureDevOps release pipelines
+This a step by step guide on how you can deploy to Umbraco Cloud projects with AzureDevOps release pipelines
 ![devops](https://user-images.githubusercontent.com/27504014/220066762-f3a207d8-84a5-42a6-a699-e0f53c7465f0.png)
 
 This guide is based on the CodeGarden talk [“Team workflow for Umbraco Cloud and Azure DevOps”](https://www.youtube.com/watch?v=Ss0tlxOujB0) with Dave´s [github repository](https://github.com/dawoe/umbraco-cloud-devops), which contains the scripts used for the guide.
