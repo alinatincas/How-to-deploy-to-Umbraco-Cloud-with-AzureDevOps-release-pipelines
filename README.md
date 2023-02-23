@@ -1,8 +1,9 @@
 # How to deploy to Umbraco Cloud with AzureDevOps release pipelines
-This a step by step guide on how you can deploy to Umbraco Cloud projects with AzureDevOps release pipelines
+This a step by step guide on how you can deploy to Umbraco Cloud projects with AzureDevOps release pipelines. As a bonus, at the end of this article, you can also find a guide on how you can auto-deploy to Umbraco Cloud by using Gitlab external repository with Gitlab bidirectional mirroring.
+
 ![devops](https://user-images.githubusercontent.com/27504014/220066762-f3a207d8-84a5-42a6-a699-e0f53c7465f0.png)
 
-This guide is based on the CodeGarden talk [“Team workflow for Umbraco Cloud and Azure DevOps”](https://www.youtube.com/watch?v=Ss0tlxOujB0) with Dave´s [github repository](https://github.com/dawoe/umbraco-cloud-devops), which contains the scripts used for the guide.
+This guide is based on the CodeGarden talk [“Team workflow for Umbraco Cloud and Azure DevOps”](https://www.youtube.com/watch?v=Ss0tlxOujB0) with Dave´s [github repository](https://github.com/dawoe/umbraco-cloud-devops), which contains the scripts used for the guide. 
 
 **CREDITS**: 
 - Dave Woestenborghs 
@@ -117,3 +118,6 @@ You can see the same if you head over to the stage of the release pipeline and c
 Thank you for reading and following this guide. 
 
 > If you have any feedback or encounter issues, please use this [link](https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/issues) to create an issue
+
+**Bonus guide**:
+If you would like to know how you can auto-deploy to Umbraco Cloud projects with Gitlab bidirectional mirroring instead of Azure Devops release pipelines, feel free to check the following guide: https://www.youtube.com/watch?v=LiG9fQu1Usw
