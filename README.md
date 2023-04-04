@@ -1,4 +1,4 @@
-# How to deploy to Umbraco Cloud with AzureDevOps release pipelines
+# How to deploy to Umbraco Cloud with AzureDevOps release pipelines for Umbraco CMS 9 and above
 This a step by step guide on how you can deploy to Umbraco Cloud projects with AzureDevOps release pipelines. As a bonus, at the end of this article, you can also find a guide on how you can auto-deploy to Umbraco Cloud by using Gitlab external repository with Gitlab bidirectional mirroring.
 
 ![devops](https://user-images.githubusercontent.com/27504014/220066762-f3a207d8-84a5-42a6-a699-e0f53c7465f0.png)
