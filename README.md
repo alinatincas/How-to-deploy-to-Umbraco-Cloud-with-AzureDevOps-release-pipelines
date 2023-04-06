@@ -120,4 +120,4 @@ Thank you for reading and following this guide.
 > If you have any feedback or encounter issues, please use this [link](https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/issues) to create an issue
 
 **Bonus guide**:
-If you would like to know how you can auto-deploy to Umbraco Cloud projects with Gitlab bidirectional mirroring instead of Azure Devops release pipelines, feel free to check the following guide: https://www.youtube.com/watch?v=LiG9fQu1Usw
+If you would like to know how you can auto-deploy to Umbraco Cloud projects with Gitlab bidirectional mirroring instead of Azure Devops release pipelines, feel free to check the following guide: https://skrift.io/issues/using-gitlab-bidirectional-mirroring-azure-devops-release-pipelines-to-auto-deploy-into-umbraco-cloud/ 
