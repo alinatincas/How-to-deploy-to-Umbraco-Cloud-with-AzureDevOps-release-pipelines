@@ -73,8 +73,7 @@ Here we specify a folder name which will then be equal to our temporary storage 
 **4.** Add a 4th task called “Copy Files”. This will copy the files from our release artifact temporary folder to our Cloud temporary folder
 - On the “display name” we need to specify the path to our Cloud temporary folder ```Copy Files to: $(System.DefaultWorkingDirectory)/$(solutionNamespace).Cloud```
 - The  “source folder” is our temporary release folder ```$(System.DefaultWorkingDirectory)/$(solutionNamespace).Temp```
-- In the “contents” we include everything besides the git folder
-```**/*!.git/**/*```
+- In the “contents” we include everything besides the git folder (make sure that !.git/**/* is on new line as seen in the image from previous step) ```**/*!.git/**/*```
 - The “target folder” is our Cloud temporary folder ```$(System.DefaultWorkingDirectory)/$(solutionNamespace).Cloud```
 - In the “advanced” enable the “overwrite” option
 
