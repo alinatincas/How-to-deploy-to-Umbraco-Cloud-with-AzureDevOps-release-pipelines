@@ -1,10 +1,10 @@
 > [!Note]
 > UPDATE!
 > Umbraco has released a CI/CD feature on Umbraco Cloud, where you can use Azure DevOps or Github Actions with Umbraco Cloud for auto-deployments from v10+. For further information you can check the [Umbraco Cloud documentation](https://docs.umbraco.com/umbraco-cloud/set-up/project-settings/umbraco-cicd). There are 2 examples for each using Bash and Powershell scripts:
-> - Details the setup of a CI/CD pipeline using Azure DevOps.
+> - Details the setup of a CI/CD pipeline using Azure DevOps:
 > - [Example using Powershell scripts](https://github.com/umbraco/UmbracoDocs/blob/main/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/azure-devops-pwsh.md)
 > - [Example using Bash scripts](https://github.com/umbraco/UmbracoDocs/blob/main/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/azure-devops.md)
-> - Details the setup of a CI/CD pipeline using GitHub Actions.
+> - Details the setup of a CI/CD pipeline using GitHub Actions:
 > - [Example using Powershell scripts](https://github.com/umbraco/UmbracoDocs/blob/main/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/github-actions-pwsh.md)
 > - [Example using Bash scripts](https://github.com/umbraco/UmbracoDocs/blob/main/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/github-actions.md)
 
