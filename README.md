@@ -1,18 +1,18 @@
 > [!Note]
 > UPDATE!
-> Umbraco has released a CI/CD feature on Umbraco Cloud, where you can use Azure DevOps or Github Actions with Umbraco Cloud for auto-deployments from v10+. For further information you can check the [Umbraco Cloud documentation](https://docs.umbraco.com/umbraco-cloud/set-up/project-settings/umbraco-cicd). There are 2 examples for each using Bash and Powershell scripts:
-> - Details the setup of a CI/CD pipeline using Azure DevOps:
-> - [Example using Powershell scripts](https://github.com/umbraco/UmbracoDocs/blob/main/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/azure-devops-pwsh.md)
-> - [Example using Bash scripts](https://github.com/umbraco/UmbracoDocs/blob/main/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/azure-devops.md)
-> - Details the setup of a CI/CD pipeline using GitHub Actions:
-> - [Example using Powershell scripts](https://github.com/umbraco/UmbracoDocs/blob/main/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/github-actions-pwsh.md)
-> - [Example using Bash scripts](https://github.com/umbraco/UmbracoDocs/blob/main/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/github-actions.md)
+> Umbraco has released a CI/CD feature on Umbraco Cloud, where you can use Azure DevOps or Github Actions with Umbraco Cloud for auto-deployments from v10+. For further information you can check the [Umbraco Cloud documentation](https://docs.umbraco.com/umbraco-cloud/set-up/project-settings/umbraco-cicd). There are 2 examples for each Azure DevOps and Github Actions using Bash and Powershell scripts:
+> - Details the setup of a CI/CD pipeline using Azure DevOps: https://docs.umbraco.com/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/azure-devops
+> - Details the setup of a CI/CD pipeline using GitHub Actions: https://docs.umbraco.com/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/github-actions
 
 # How to deploy to Umbraco Cloud with AzureDevOps release pipelines for Umbraco CMS v9 and above
 This a step by step guide on how you can deploy to Umbraco Cloud projects with AzureDevOps release pipelines. As a bonus, at the end of this article, you can also find a guide on how you can auto-deploy to Umbraco Cloud by using Gitlab external repository with Gitlab bidirectional mirroring.
 
 ![devops](https://user-images.githubusercontent.com/27504014/220066762-f3a207d8-84a5-42a6-a699-e0f53c7465f0.png)
 
+> [!Note]
+> Below is the previous way of setting up Umbraco Cloud with Azure DevOps release pipeline. Please check this guide https://docs.umbraco.com/umbraco-cloud/set-up/project-settings/umbraco-cicd/samplecicdpipeline/azure-devops for newer, updated and easier-to-follow steps.
+
+<del>
 This guide is based on the CodeGarden talk [“Team workflow for Umbraco Cloud and Azure DevOps”](https://www.youtube.com/watch?v=Ss0tlxOujB0) with Dave´s [github repository](https://github.com/dawoe/umbraco-cloud-devops), which contains the scripts used for the guide. 
 
 **CREDITS**: 
@@ -127,6 +127,7 @@ You can see the same if you head over to the stage of the release pipeline and c
 Thank you for reading and following this guide. 
 
 > If you have any feedback or encounter issues, please use this [link](https://github.com/alinatincas/Setting-up-CI-CD-for-Umbraco-Cloud-using-Azure-DevOps/issues) to create an issue
+</del>
 
 **Bonus guide**:
 If you would like to know how you can auto-deploy to Umbraco Cloud projects with Gitlab bidirectional mirroring instead of Azure Devops release pipelines, feel free to check the following guide: https://skrift.io/issues/using-gitlab-bidirectional-mirroring-azure-devops-release-pipelines-to-auto-deploy-into-umbraco-cloud/ 
